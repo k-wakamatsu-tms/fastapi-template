@@ -1,0 +1,56 @@
+{
+  "name": "api",
+  // // DockerFileでイメージ・コンテナを作成
+  // "dockerFile": "Dockerfile",
+  // docker-composeでイメージ・コンテナを作成
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "api",
+  "workspaceFolder": "/workspace",
+  // リモート先のvscodeにインストールする拡張機能
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "njpwerner.autodocstring",
+    "oderwat.indent-rainbow",
+    "mosapride.zenkaku",
+    "shardulm94.trailing-spaces",
+    "KevinRose.vsc-python-indent",
+    "njpwerner.autodocstring",
+    "formulahendry.code-runner",
+    "esbenp.prettier-vscode",
+    // "ms-python.black-formatter",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "esbenp.prettier-vscode"
+    // "ms-python.flake8"
+  ],
+  "settings": {
+    // "terminal.integrated.profiles.linux": {
+    //   "bash": {
+    //     "path": "/bin/bash"
+    //   }
+    // },
+    // "terminal.integrated.defaultProfile.linux": "bash",
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    // Pylance
+    "python.languageServer": "Pylance",
+    "python.analysis.completeFunctionParens": true,
+    // Linter(flake8)
+    "python.linting.flake8Path": "/usr/local/bin/flake8",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    // Formatter(black)
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": ["--line-length=79"],
+    "[python]": {
+      "editor.defaultFormatter": null,
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+      }
+    },
+    "isort.args": ["--profile", "black"]
+  }
+}
