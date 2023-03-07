@@ -1,1 +1,3 @@
 # fastapi-template
+vscodeのDevContainersを使用して、pythonのApiFWのFastApiでの開発環境を作成します。
+vscodeでDevContainersの拡張機能をインストールするだけ
